@@ -63,9 +63,9 @@ btn15 = document.getElementById("btn15");
    * to set the context to the correct object (the current context)
    */
 
-btn1.onclick = function() {
+btn1.addEventListener("click", function(){
   setMyLightGreen.apply(this);
-};
+});
 
   /*
    * Add a click event listener to btn2
@@ -75,10 +75,12 @@ btn1.onclick = function() {
    * using the Function prototype method: apply
    * to set the context to the correct object
    */
-btn2.onclick = () => {
-  setMyLightGreen.apply(this);
-  console.log("this");
-};
+
+btn2.addEventListener("click", () => {
+  setMyLightGreen.apply(this.btn2);
+
+});
+
 
   /*
    * Add a click event listener to btn3
