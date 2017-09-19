@@ -161,6 +161,7 @@ btn7.addEventListener("click", () => {
 btn8.addEventListener("click", function(event){
   setMyLightClass.call(btn8, event, "light-green");
 });
+
   /*
    * Add a click event listener to btn9
    * the handler method will be a fat arrow function expression
@@ -175,12 +176,14 @@ btn8.addEventListener("click", function(event){
 btn9.addEventListener("click", (event) => {
   setMyLightClass.call(btn9, event, "light-green");
 });
+
   /*
    * Declare a new const named setLight10Green
    * assign it's value to a reference to the function setMyLightGreen
    * using the Function prototype method: bind
    * to set the context to the btn10 object
    */
+
 setLight10Green = setMyLightGreen.bind(btn10, "light-green");
 
   /*
@@ -189,6 +192,7 @@ setLight10Green = setMyLightGreen.bind(btn10, "light-green");
    * the body of the event handler function
    * will invoke the setLight10Green function
    */
+
 btn10.addEventListener("click", function(){
   setLight10Green();
 });
@@ -203,12 +207,14 @@ btn10.addEventListener("click", function(){
    */
 
 setLight11Green = setMyLightClass.bind(btn11, null, "light-green");
+
   /*
    * Add a click event listener to btn11
    * the handler method will be an anonymous function expression
    * the body of the event handler function
    * will invoke the setLight11Green function
    */
+
 btn11.addEventListener("click", function(){
   setLight11Green();
 });
@@ -219,6 +225,7 @@ btn11.addEventListener("click", function(){
    * using the Function prototype method: bind
    * to set the context to the btn12 object
    */
+
 setLight12Class = setMyLightClass.bind(btn12);
 
   /*
@@ -258,6 +265,10 @@ btn13.addEventListener("click", function(event){
    * on the setMyLightGreen function
    */
 
+
+btn14.addEventListener("click", function(){
+  setMyLightGreen.bind(this)();
+});
 
   /*
    * Add a click event listener to btn15
