@@ -30,7 +30,7 @@ function setMyLightGreen(){
    */
 function setMyLightClass(event, desiredClass){
   var lightId = this.dataset.lightId;
-  document.getElementById(lightId).className = "desiredClass";
+  document.getElementById(lightId).className = desiredClass;
 }
   /*
    * Declare 15 constants btn1, btn2, btn3, ...
@@ -77,7 +77,7 @@ btn1.addEventListener("click", function(){
    */
 
 btn2.addEventListener("click", () => {
-  setMyLightGreen.apply(this.btn2);
+  setMyLightGreen.apply(btn2);
 
 });
 
@@ -102,10 +102,9 @@ btn3.addEventListener("click", function(){
    * to set the context to the correct object (the current context)
    *   and passing two aditional arguments, event and 'light-green'
    */
+
 btn4.addEventListener("click", function(event){
-  setMyLightClass.apply(this.btn4, [event, "light-green"]);
-
-
+  setMyLightClass.apply(btn4, [event, "light-green"]);
 
 });
 
@@ -119,7 +118,9 @@ btn4.addEventListener("click", function(event){
    * to set the context to the correct object
    *   and passing two aditional arguments, event and 'light-green'
    */
-
+btn5.addEventListener("click", (event) => {
+  setMyLightClass.apply(btn5, [event, "light-green"]);
+});
 
   /*
    * Add a click event listener to btn6
