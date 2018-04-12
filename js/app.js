@@ -278,6 +278,6 @@
 
   btn15.addEventListener(
     'click',
-    setMyLightClass.bind(btn15, event, 'light-green')
+    setMyLightClass.bind(btn15, null, 'light-green')
   );
 })(window);
