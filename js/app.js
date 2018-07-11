@@ -22,8 +22,8 @@
    * on this dom element, set the className to 'light-green'
    */
   function setMyLightGreen() {
-    let lightId = this.dataset.lightId;
-    let domElem = document.getElementById(lightId);
+    const lightId = this.dataset.lightId;
+    const domElem = document.getElementById(lightId);
     domElem.classList.add('light-green');
   }
 
@@ -39,8 +39,8 @@
    * on this dom element, set the className to the value of desiredClass
    */
   function setMyLightClass(event, desiredClass) {
-    let lightId = this.dataset.lightId;
-    let domElem = document.getElementById(lightId);
+    const lightId = this.dataset.lightId;
+    const domElem = document.getElementById(lightId);
     domElem.classList.add(desiredClass);
   }
 
@@ -266,6 +266,6 @@
    *
    * Hint: Do not declare a new function expression as an event handler.
    */
-
+  btn15.addEventListener('click', setMyLightClass.bind(btn15, null, 'light-green'));
 
 }(window));
