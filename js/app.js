@@ -74,7 +74,7 @@
    * to set the context to the correct object (the current context)
    */
   btn1.addEventListener('click', function() {
-    setMyLightGreen.apply(event.currentTarget);
+    setMyLightGreen.apply(this);
   });
 
   /*
@@ -106,7 +106,7 @@
    *   and passing two aditional arguments, event and 'light-green'
    */
   btn4.addEventListener('click', function(event) {
-    setMyLightClass.apply(event.currentTarget, [event, 'light-green']);
+    setMyLightClass.apply(this, [event, 'light-green']);
   });
 
   /*
@@ -132,7 +132,7 @@
    * to set the context to the correct object (the current context)
    */
   btn6.addEventListener('click', function() {
-    setMyLightGreen.call(event.currentTarget);
+    setMyLightGreen.call(this);
   });
 
   /*
@@ -158,7 +158,7 @@
    *   and passing two aditional arguments, event and 'light-green'
    */
   btn8.addEventListener('click', function(event) {
-    setMyLightClass.call(event.target, event, 'light-green');
+    setMyLightClass.call(this, event, 'light-green');
   });
 
   /*
