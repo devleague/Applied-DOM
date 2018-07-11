@@ -74,7 +74,7 @@
    * to set the context to the correct object (the current context)
    */
   btn1.addEventListener('click', function() {
-    setMyLightGreen.apply(this);
+    setMyLightGreen.apply(event.currentTarget);
   });
 
   /*
