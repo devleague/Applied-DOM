@@ -1,5 +1,4 @@
 (function(window) {
-
   /*
    * Create a function named setMyLightGreen
    * which takes zero arguments
@@ -108,7 +107,7 @@
    */
   btn4.addEventListener('click', function(event) {
     setMyLightClass.apply(event.currentTarget, [event, 'light-green']);
-  })
+  });
 
   /*
    * Add a click event listener to btn5
@@ -120,9 +119,9 @@
    * to set the context to the correct object
    *   and passing two aditional arguments, event and 'light-green'
    */
-btn5.addEventListener('click', event => {
-  setMyLightClass.apply(event.currentTarget, [event, 'light-green']);
-})
+  btn5.addEventListener('click', event => {
+    setMyLightClass.apply(event.currentTarget, [event, 'light-green']);
+  });
 
   /*
    * Add a click event listener to btn6
@@ -132,9 +131,9 @@ btn5.addEventListener('click', event => {
    * using the Function prototype method: call
    * to set the context to the correct object (the current context)
    */
-btn6.addEventListener('click', function() {
-  setMyLightGreen.call(this);
-})
+  btn6.addEventListener('click', function() {
+    setMyLightGreen.call(this);
+  });
 
   /*
    * Add a click event listener to btn7
@@ -146,7 +145,7 @@ btn6.addEventListener('click', function() {
    */
   btn7.addEventListener('click', () => {
     setMyLightGreen.call(event.currentTarget);
-  })
+  });
 
   /*
    * Add a click event listener to btn8
@@ -158,7 +157,9 @@ btn6.addEventListener('click', function() {
    * to set the context to the correct object (the current context)
    *   and passing two aditional arguments, event and 'light-green'
    */
-
+  btn8.addEventListener('click', function(event) {
+    setMyLightClass.call(event.target, event, 'light-green');
+  });
 
   /*
    * Add a click event listener to btn9
