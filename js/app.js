@@ -144,7 +144,7 @@
    * to set the context to the correct object
    */
   btn7.addEventListener('click', () => {
-    setMyLightGreen.call(event.currentTarget);
+    setMyLightGreen.call(btn7);
   });
 
   /*
